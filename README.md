@@ -1,4 +1,4 @@
-# CustomETHaddress
+# Custom ethereum wallet address
 
 Create an address with custom prefix
 
