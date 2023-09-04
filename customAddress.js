@@ -16,6 +16,7 @@ const { CURVE, Point } = require('@noble/secp256k1');
  * otherwise it may take a lot of time to find an address
  */
 const customPrefix = "0x0dad0";
+console.log("customPrefix = ", customPrefix);
 
 /**
  * @dev Custom seed 
@@ -26,6 +27,7 @@ console.log("seed = ", seed);
 
 let privateKeyFromSeed = BigNumber.from(keccak256(toUtf8Bytes(seed)));
 let privateKey = arrayify(privateKeyFromSeed.mod(CURVE.n));
+console.log("privateKey = ", privateKeyFromSeed.toHexString());
 
 /**
  * @dev BigNumber deletes leading zeros,
